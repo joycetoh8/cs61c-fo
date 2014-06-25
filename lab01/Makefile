@@ -11,5 +11,5 @@ SRC=hello.c
 all:
 	$(CC) $(CFLAGS) $(SRC) -o $(EXEC)
 clean: 
-	-rm -rf *.o *~ "#"*"#" $(EXEC)
+	rm -rf *.o *~ "#"*"#" $(EXEC)
  
