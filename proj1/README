@@ -1,0 +1,80 @@
+THE FILES HERE ARE INTENDED TO BE HELPFUL, NOT TO LIMIT WHAT YOU CAN DO.
+***IGNORE THEM ENTIRELY, IF YOU PREFER!***  However,whatever you turn in
+must satisfy the following criteria:
+
+1. 'make' must compile your program from scratch, producing an executable
+   file 'lifcc' in this directory.
+2. The command
+      ./lifcc FOO.lc
+   must produce an equivalent MIPS program on stdout, unless FOO.lc is
+   an illegal LIFC program.
+3. Your program must exit with code 1 if there are any errors in any of the
+   files, or if there are other errors (such as missing, unreadable,
+   or unwritable files).  It must produce a proper error message for syntax
+   errors.
+4. Your program must exit with code 0 otherwise.
+
+Don't let anything in your finished program remain mysterious to you.
+Try to understand everything that's here, and if you can't, then feel
+free to ask us what's going on.
+
+We judge your program by how it runs on the hive machines.  It's
+no good protesting that it works at home; your "customer" is not running on
+your home setup!
+
+Be sure to submit your program properly by pushing to your class GitHub repo
+with the tag proj1.
+
+The current contents of the files here are extremely skeletal.  Don't expect
+that just because something is in the skeleton that it is complete.
+Furthermore, you are free to change or discard ANY PART of it as long
+as your final program works according to spec.
+
+The tests provided are also completely insufficient. We won't be grading you
+on your test suite directly, but it is incredibly unlikely that an untested
+program will receive high marks.
+
+MANIFEST:
+
+   README:     This file.
+
+   Makefile:   General directions for building and testing the program and
+               cleaning up.  This mostly delegates to subdirectories src and
+               tests.
+
+   proj1.marker:   A file to help us locate your submission inside your repository.
+
+   Directory src/:
+        compiler.c: Contains the main program.
+        code_gen.c: Function definitions for code generation.
+	code_gen.h: Function declarations for code generation.
+	lexer.c:    Function definitions for lexing.
+	lexer.h:    Function declarations for lexing.
+	parser.c:   Function definitions for parsing.
+	parser.h:   Function declarations for parsing.
+
+        Makefile:   General directions for building the program.
+
+	Directory util/:
+	    smap.c:  Definitions of string-map utilities.
+	    smap.h:  Declarations of string-map utilities.
+	    util.c:  Definitions of general use utilities.
+	    util.h:  Declarations of general use utilities.
+
+
+    Directory tests/:
+        test_proj1.py:  A testing script for project 1.  It
+                        runs the compiler, runs MARS on the result,
+                        and checks the output.
+
+        Makefile:   General directions for testing the program.
+
+        Directory correct/:  Tests that are supposed to be correct programs.
+
+                trivial.lc, trivial.std:
+                     A sample program and expected output file.
+
+        Directory error/:    Tests that are supposed to cause errors.
+
+                triviallybad.lc:
+                     A sample erroneous program.
